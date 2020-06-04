@@ -1,3 +1,16 @@
 index:
     path: /
     controller: App\Controller\DefaultController::index
+
+login:
+    path: /login
+    controller: App\Controller\UserController::login
+
+
+logout:
+    path: /logout
+    controller: App\Controller\UserController::logout
+
+add:
+    path: /new-user
+    controller: App\Controller\UserController::add
