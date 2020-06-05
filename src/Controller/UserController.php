@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Controller;
-
 
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
@@ -11,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
-class UserController extends AbstractController
+class UserController extends BaseController
 {
 //    public function add(EntityManagerInterface $entityManager, UserPasswordEncoderInterface $encoder) {
 //        $user = new User();
@@ -37,6 +35,5 @@ class UserController extends AbstractController
 
     public function logout()
     {
-
     }
 }

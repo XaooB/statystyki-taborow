@@ -8,7 +8,11 @@
         {% endblock %}
     </head>
     <body>
-        <a href="{{ path('login') }}">Zaloguj się</a>
+        {% if not is_granted('ROLE_USER') %}
+            <a href="{{ path('login') }}">Zaloguj się</a>
+        {% else %}
+            <a href="{{ path('logout') }}">Wyloguj się</a>
+        {% endif %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
