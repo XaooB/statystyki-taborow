@@ -11,12 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="007c53ac-9504-4ff4-badd-5f50ad4cd305" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_30_08_2020__15_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Institution.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Institution.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Performer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Performer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Repairs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Repairs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Vehicle.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +176,8 @@
       <workItem from="1591385548907" duration="284000" />
       <workItem from="1593785603216" duration="1103000" />
       <workItem from="1594639300837" duration="93000" />
-      <workItem from="1598793986461" duration="862000" />
+      <workItem from="1598793986461" duration="1802000" />
+      <workItem from="1598795802059" duration="1505000" />
     </task>
     <servers />
   </component>
@@ -239,6 +241,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state width="444" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1591295062072" />
+    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1598797218243">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598797218243" />
     <state x="1201" y="346" key="FileChooserDialogImpl" timestamp="1594639392241">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -307,10 +313,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="431" y="256" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1598794765212" />
-    <state x="937" y="268" key="VCS.ChangeListViewerDialog" timestamp="1591208347729">
+    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog" timestamp="1598797005779">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="937" y="268" key="VCS.ChangeListViewerDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1591208347729" />
+    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598797005779" />
     <state x="698" y="273" width="860" height="653" key="find.popup" timestamp="1591383885956">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>

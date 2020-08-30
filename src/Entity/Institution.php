@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\InstitutionRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,6 +24,16 @@ class Institution
      */
     private $name;
 
+    /**
+     * @ORM\OneToMany (targetEntity="App\Entity\Vehicle", mappedBy="institution");
+     */
+    private $vehicle;
+
+    public function __construct()
+    {
+        $this->vehicle = new ArrayCollection();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -35,6 +47,37 @@ class Institution
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Vehicle[]
+     */
+    public function getVehicle(): Collection
+    {
+        return $this->vehicle;
+    }
+
+    public function addVehicle(Vehicle $vehicle): self
+    {
+        if (!$this->vehicle->contains($vehicle)) {
+            $this->vehicle[] = $vehicle;
+            $vehicle->setInstitution($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVehicle(Vehicle $vehicle): self
+    {
+        if ($this->vehicle->contains($vehicle)) {
+            $this->vehicle->removeElement($vehicle);
+            // set the owning side to null (unless already changed)
+            if ($vehicle->getInstitution() === $this) {
+                $vehicle->setInstitution(null);
+            }
+        }
 
         return $this;
     }

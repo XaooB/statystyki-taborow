@@ -37,6 +37,16 @@ class Repairs
      */
     private $password;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Vehicle", inversedBy="repair")
+     */
+    private $vehicle;
+
+    /**
+     * @ORM\ManyToOne (targetEntity="App\Entity\Performer", inversedBy="repair")
+     */
+    private $performer;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +96,30 @@ class Repairs
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getVehicle(): ?Vehicle
+    {
+        return $this->vehicle;
+    }
+
+    public function setVehicle(?Vehicle $vehicle): self
+    {
+        $this->vehicle = $vehicle;
+
+        return $this;
+    }
+
+    public function getPerformer(): ?Performer
+    {
+        return $this->performer;
+    }
+
+    public function setPerformer(?Performer $performer): self
+    {
+        $this->performer = $performer;
 
         return $this;
     }
