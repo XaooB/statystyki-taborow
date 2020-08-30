@@ -11,12 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="007c53ac-9504-4ff4-badd-5f50ad4cd305" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_30_08_2020__15_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TheSpacebar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -141,7 +141,8 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.ChangelistConflict" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -149,8 +150,9 @@
       <recent name="D:\xampp\htdocs\statystyki-taborowe\public\css" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\xaoopc\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -170,11 +172,15 @@
       <workItem from="1591285484361" duration="2362000" />
       <workItem from="1591287897975" duration="7461000" />
       <workItem from="1591381419764" duration="3884000" />
+      <workItem from="1591385548907" duration="284000" />
+      <workItem from="1593785603216" duration="1103000" />
+      <workItem from="1594639300837" duration="93000" />
+      <workItem from="1598793986461" duration="862000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -225,14 +231,18 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="860" y="382" key="#xdebugger.evaluate/62.0.1858.1080@62.0.1858.1080" timestamp="1591295228563" />
+    <state x="490" y="136" key="CommitChangelistDialog2" timestamp="1591385723246">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="490" y="136" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1591385723246" />
     <state width="444" height="466" key="DebuggerActiveHint" timestamp="1591295062072">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state width="444" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1591295062072" />
-    <state x="1201" y="346" key="FileChooserDialogImpl" timestamp="1591207915928">
+    <state x="1201" y="346" key="FileChooserDialogImpl" timestamp="1594639392241">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="1201" y="346" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1591207915928" />
+    <state x="1201" y="346" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1594639392241" />
     <state width="570" height="262" key="GridCell.Tab.0.bottom" timestamp="1591295361253">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -293,10 +303,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="1469" y="575" key="NewPhpFileDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1591202213044" />
-    <state x="752" y="320" key="SettingsEditor" timestamp="1591288086161">
+    <state x="431" y="256" key="SettingsEditor" timestamp="1598794765212">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="752" y="320" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1591288086161" />
+    <state x="431" y="256" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1598794765212" />
     <state x="937" y="268" key="VCS.ChangeListViewerDialog" timestamp="1591208347729">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
