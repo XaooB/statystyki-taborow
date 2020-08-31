@@ -14,3 +14,43 @@ logout:
 add:
     path: /new-user
     controller: App\Controller\UserController::add
+
+admin_categories:
+    path: /admin/categories
+    controller: App\Controller\AdminController:categories
+
+admin_categories_new:
+    path: /admin/categories/new
+    controller: App\Controller\AdminController:categories_new
+
+admin_institutions:
+    path: /admin/institutions
+    controller: App\Controller\AdminController:institutions
+
+admin_institutions_new:
+    path: /admin/institutions/new
+    controller: App\Controller\AdminController:institutions_new
+
+admin_performers:
+    path: /admin/performers
+    controller: App\Controller\AdminController:performers
+
+admin_performers_new:
+    path: /admin/performers/new
+    controller: App\Controller\AdminController:performers_new
+
+admin_repairs:
+    path: /admin/repairs
+    controller: App\Controller\AdminController:repairs
+
+admin_repairs_new:
+    path: /admin/repairs/new
+    controller: App\Controller\AdminController:repairs_new
+
+admin_vehicles:
+    path: /admin/vehicles
+    controller: App\Controller\AdminController:vehicles
+
+admin_vehicles_new:
+    path: /admin/vehicles/new
+    controller: App\Controller\AdminController:vehicles_new

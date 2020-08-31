@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand />
     <select>
@@ -11,13 +14,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="007c53ac-9504-4ff4-badd-5f50ad4cd305" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_categories.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_categories_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_institutions_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_instutitions.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_performers.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_performers_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_repaires_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_repairs.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_vehicles.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_vehicles_new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Institution.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Institution.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Performer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Performer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Repairs.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Repairs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Vehicle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Vehicle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +142,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/Admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -142,10 +151,13 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.ChangelistConflict" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\statystyki-taborowe\templates\Admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\statystyki-taborowe\public\js" />
       <recent name="D:\xampp\htdocs\statystyki-taborowe\public\css" />
@@ -177,7 +189,8 @@
       <workItem from="1593785603216" duration="1103000" />
       <workItem from="1594639300837" duration="93000" />
       <workItem from="1598793986461" duration="1802000" />
-      <workItem from="1598795802059" duration="1505000" />
+      <workItem from="1598795802059" duration="1760000" />
+      <workItem from="1598873605655" duration="1282000" />
     </task>
     <servers />
   </component>
@@ -241,10 +254,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state width="444" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1591295062072" />
-    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1598797218243">
+    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1598797563412">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598797218243" />
+    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598797563412" />
     <state x="1201" y="346" key="FileChooserDialogImpl" timestamp="1594639392241">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -301,30 +314,30 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="564" y="385" key="IDE.errors.dialog/62.0.1858.1080@62.0.1858.1080" timestamp="1591202440185" />
-    <state x="1444" y="169" key="NewPhpClassDialog" timestamp="1591384593208">
+    <state x="973" y="290" key="NewPhpClassDialog" timestamp="1598873843111">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="1444" y="169" key="NewPhpClassDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1591384593208" />
+    <state x="973" y="290" key="NewPhpClassDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598873843111" />
     <state x="1469" y="575" key="NewPhpFileDialog" timestamp="1591202213044">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="1469" y="575" key="NewPhpFileDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1591202213044" />
-    <state x="431" y="256" key="SettingsEditor" timestamp="1598794765212">
+    <state x="431" y="256" key="SettingsEditor" timestamp="1598874069903">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="431" y="256" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1598794765212" />
-    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog" timestamp="1598797005779">
+    <state x="431" y="256" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1598874069903" />
+    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog" timestamp="1598873621105">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598797005779" />
+    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598873621105" />
     <state x="698" y="273" width="860" height="653" key="find.popup" timestamp="1591383885956">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="698" y="273" width="860" height="653" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1591383885956" />
-    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1591383872708">
+    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1598874800288">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1591383872708" />
+    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1598874800288" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
