@@ -2,14 +2,38 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
+use App\Form\AdminCategoriesType;
+use Symfony\Component\HttpFoundation\Request;
+
 class AdminController extends BaseController
 {
     public function categories() {
-        return $this->render('Admin\admin_categories.html.twig');
+        $em = $this->getDoctrine()->getManager()->getRepository(Category::class);
+        $categories = $em->findAll();
+
+        return $this->render('Admin\admin_categories.html.twig', [
+            'categories' => $categories
+        ]);
     }
 
-    public function categories_new() {
-        return $this->render('Admin\admin_categories_new.html.twig');
+    public function categories_new(Request $request) {
+        $categories = new Category();
+        $form = $this->createForm(AdminCategoriesType::class, $categories);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($categories);
+            $em->flush();
+
+            $this->addFlash('success', 'Kategoria została dodana!');
+            return $this->redirectToRoute('admin_categories');
+        }
+
+        return $this->render('Admin\admin_categories_new.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
     public function institutions() {

@@ -8,6 +8,9 @@
         {% endblock %}
     </head>
     <body>
+        {#-- flash messages --#}
+        {{ include('flash-messages.html.twig') }}
+
         {% if not is_granted('ROLE_USER') %}
             <a href="{{ path('login') }}">Zaloguj się</a>
         {% else %}

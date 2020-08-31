@@ -14,19 +14,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="007c53ac-9504-4ff4-badd-5f50ad4cd305" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_categories.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_categories_new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_institutions_new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_instutitions.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_performers.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_performers_new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_repaires_new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_repairs.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_vehicles.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Admin/admin_vehicles_new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/flash-messages.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/statystyki-taborowe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/statystyki-taborowe.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AdminCategoriesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AdminCategoriesType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/admin_categories.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin/admin_categories.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Admin/admin_categories_new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Admin/admin_categories_new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +121,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
     </include_path>
   </component>
   <component name="ProjectId" id="1codzKSBEcGmbiVFKLx6g3pVmit" />
@@ -190,7 +191,9 @@
       <workItem from="1594639300837" duration="93000" />
       <workItem from="1598793986461" duration="1802000" />
       <workItem from="1598795802059" duration="1760000" />
-      <workItem from="1598873605655" duration="1282000" />
+      <workItem from="1598873605655" duration="1795000" />
+      <workItem from="1598875412502" duration="1796000" />
+      <workItem from="1598877218354" duration="266000" />
     </task>
     <servers />
   </component>
@@ -254,10 +257,10 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state width="444" height="466" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1591295062072" />
-    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1598797563412">
+    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1598877477100">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598797563412" />
+    <state x="154" y="92" width="1674" height="896" key="DiffContextDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598877477100" />
     <state x="1201" y="346" key="FileChooserDialogImpl" timestamp="1594639392241">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
@@ -326,18 +329,18 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="431" y="256" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1598874069903" />
-    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog" timestamp="1598873621105">
+    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog" timestamp="1598875260945">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598873621105" />
+    <state x="937" y="268" width="657" height="577" key="VCS.ChangeListViewerDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1598875260945" />
     <state x="698" y="273" width="860" height="653" key="find.popup" timestamp="1591383885956">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="698" y="273" width="860" height="653" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1591383885956" />
-    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1598874800288">
+    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup" timestamp="1598876843699">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1598874800288" />
+    <state x="761" y="232" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1598876843699" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

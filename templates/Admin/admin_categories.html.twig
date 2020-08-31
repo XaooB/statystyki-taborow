@@ -2,4 +2,22 @@
 
 {% block body %}
     <h1>admin categories</h1>
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Slug</th>
+            <th>Akcje</th>
+        </tr>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.name }}</td>
+                <td>{{ category.slug }}</td>
+                <td>
+                    {#temporary#}
+                    <button class="button">Usuń</button>
+                    <button class="button">Edytuj</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
