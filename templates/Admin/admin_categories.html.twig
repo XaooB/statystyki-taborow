@@ -14,8 +14,8 @@
                 <td>{{ category.slug }}</td>
                 <td>
                     {#temporary#}
-                    <button class="button">Usuń</button>
-                    <button class="button">Edytuj</button>
+                    <button class="button">{{ getText('admin_delete') }}</button>
+                    <button class="button">{{ getText('admin_edit') }}</button>
                 </td>
             </tr>
         {% endfor %}

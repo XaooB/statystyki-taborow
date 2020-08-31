@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Form\AdminCategoriesType;
+use App\Services\TextDictionary;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends BaseController
@@ -27,7 +28,7 @@ class AdminController extends BaseController
             $em->persist($categories);
             $em->flush();
 
-            $this->addFlash('success', 'Kategoria została dodana!');
+            $this->addFlash('success', $this->getText('admin_category_success'));
             return $this->redirectToRoute('admin_categories');
         }
 
