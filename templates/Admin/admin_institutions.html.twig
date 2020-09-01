@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Instytucje</h1>
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Slug</th>
+            <th>Akcje</th>
+        </tr>
+        {% for institution in institutions %}
+            <tr>
+                <td>{{ institution.name }}</td>
+                <td>{{ institution.slug }}</td>
+                <td>
+                    <button class="button">{{ getText('admin_delete') }}</button>
+                    <button class="button">{{ getText('admin_edit') }}</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
