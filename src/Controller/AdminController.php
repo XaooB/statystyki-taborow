@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Form\AdminCategoriesType;
-use App\Services\TextDictionary;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends BaseController
