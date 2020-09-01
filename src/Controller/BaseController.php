@@ -25,4 +25,8 @@ abstract class BaseController extends AbstractController
         } catch (\Exception $e) {
         }
     }
+
+    public function getEntity($entity) {
+        return $this->getDoctrine()->getManager()->getRepository($entity);
+    }
 }
