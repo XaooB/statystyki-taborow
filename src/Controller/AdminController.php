@@ -3,13 +3,15 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Entity\Institution;
 use App\Form\AdminCategoriesType;
+use App\Form\AdminInstitutionsType;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends BaseController
 {
     public function categories() {
-        $em = $this->getDoctrine()->getManager()->getRepository(Category::class);
+        $em = $this->getEntity(Category::class);
         $categories = $em->findAll();
 
         return $this->render('Admin\admin_categories.html.twig', [
@@ -27,7 +29,7 @@ class AdminController extends BaseController
             $em->persist($categories);
             $em->flush();
 
-            $this->addFlash('success', $this->getText('admin_category_success'));
+            $this->addFlash('success', $this->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_categories');
         }
 
@@ -37,11 +39,31 @@ class AdminController extends BaseController
     }
 
     public function institutions() {
-        return $this->render('Admin\admin_institutions.html.twig');
+        $em = $this->getEntity(Institution::class);
+        $institutions = $em->findAll();
+
+        return $this->render('Admin\admin_institutions.html.twig', [
+            'institutions' => $institutions
+        ]);
     }
 
-    public function institutions_new() {
-        return $this->render('Admin\admin_institutions_new.html.twig');
+    public function institutions_new(Request $request) {
+        $institution = new Institution();
+        $form = $this->createForm(AdminInstitutionsType::class, $institution);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form ->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($institution);
+            $em->flush();
+
+            $this->addFlash('success', $this->getText('admin_database_saved'));
+            return $this->redirectToRoute('admin_institutions');
+        }
+
+        return $this->render('Admin\admin_institutions_new.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
     public function vehicles() {

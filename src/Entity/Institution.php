@@ -25,6 +25,11 @@ class Institution
     private $name;
 
     /**
+     * @ORM\Column (type="string", length=10)
+     */
+    private $slug;
+
+    /**
      * @ORM\OneToMany (targetEntity="App\Entity\Vehicle", mappedBy="institution");
      */
     private $vehicle;
@@ -49,6 +54,18 @@ class Institution
         $this->name = $name;
 
         return $this;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
     }
 
     /**

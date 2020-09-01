@@ -10,7 +10,7 @@ class TextDictionary
         return [
             'admin_edit' => 'Edytuj',
             'admin_delete' => 'Usuń',
-            'admin_category_success' => 'Kategoria została dodana'
+            'admin_database_saved' => 'Nowy wpis został dodany do bazy'
         ];
     }
 
