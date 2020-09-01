@@ -19,14 +19,11 @@ abstract class BaseController extends AbstractController
         return parent::getUser();
     }
 
-    public function getText($key) {
-        try {
-            return $this->textDictionary->getText($key);
-        } catch (\Exception $e) {
-        }
+    protected function getText($key) {
+        return $this->textDictionary->getText($key);
     }
 
-    public function getEntity($entity) {
+    protected function getEntity($entity) {
         return $this->getDoctrine()->getManager()->getRepository($entity);
     }
 }

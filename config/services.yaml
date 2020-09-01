@@ -27,3 +27,7 @@ services:
     # please note that last definitions always *replace* previous ones
 
     Doctrine\Common\Persistence\ObjectManager: '@doctrine.orm.default_entity_manager'
+
+    App\Services\DoctrineManagerService:
+        arguments:
+            $entityManager: "@doctrine.orm.default_entity_manager"

@@ -8,10 +8,23 @@ use App\Entity\Performer;
 use App\Form\AdminCategoriesType;
 use App\Form\AdminInstitutionsType;
 use App\Form\AdminPerformersType;
+use App\Services\DoctrineManagerService;
+use App\Services\TextDictionary;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends BaseController
 {
+    /**
+     * @var DoctrineManagerService
+     */
+    private $em;
+
+    public function __construct(TextDictionary $textDictionary, DoctrineManagerService $em)
+    {
+        $this->em = $em;
+        parent::__construct($textDictionary);
+    }
+
     public function categories() {
         $em = $this->getEntity(Category::class);
         $categories = $em->findAll();
@@ -27,9 +40,7 @@ class AdminController extends BaseController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($categories);
-            $em->flush();
+            $this->em->save($categories);
 
             $this->addFlash('success', $this->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_categories');
@@ -55,9 +66,7 @@ class AdminController extends BaseController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form ->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($institution);
-            $em->flush();
+            $this->em->save($institution);
 
             $this->addFlash('success', $this->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_institutions');
@@ -99,9 +108,7 @@ class AdminController extends BaseController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($performers);
-            $em->flush();
+            $this->em->save($performers);
 
             $this->addFlash('success', $this->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_performers');
