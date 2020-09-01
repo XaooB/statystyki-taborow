@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Instytucje</h1>
+    <div class="admin__header">
+        <h1>Instytucje</h1>
+        <a class="button" href="{{ path('admin_institutions_new') }}">{{ getText('admin_add_new') }}</a>
+    </div>
     <table>
         <tr>
             <th>Nazwa</th>
