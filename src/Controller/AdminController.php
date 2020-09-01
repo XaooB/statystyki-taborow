@@ -4,8 +4,10 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Entity\Institution;
+use App\Entity\Performer;
 use App\Form\AdminCategoriesType;
 use App\Form\AdminInstitutionsType;
+use App\Form\AdminPerformersType;
 use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends BaseController
@@ -83,11 +85,30 @@ class AdminController extends BaseController
     }
 
     public function performers() {
-        return $this->render('Admin\admin_performers.html.twig');
+        $em = $this->getEntity(Performer::class);
+        $performers = $em->findAll();
+
+        return $this->render('Admin\admin_performers.html.twig', [
+            'performers' => $performers
+        ]);
     }
 
-    public function performers_new() {
-        return $this->render('Admin\admin_performers_new.html.twig');
+    public function performers_new(Request $request) {
+        $performers = new Performer();
+        $form = $this->createForm(AdminPerformersType::class, $performers);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($performers);
+            $em->flush();
+
+            $this->addFlash('success', $this->getText('admin_database_saved'));
+            return $this->redirectToRoute('admin_performers');
+        }
+        return $this->render('Admin\admin_performers_new.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
 }
