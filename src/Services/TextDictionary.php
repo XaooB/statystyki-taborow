@@ -4,6 +4,8 @@
 namespace App\Services;
 
 
+use Symfony\Component\Config\Definition\Exception\Exception;
+
 class TextDictionary
 {
     protected $dictionary = [
@@ -18,6 +20,6 @@ class TextDictionary
             return $this->dictionary[$key];
         }
 
-        throw new \Exception('No value provided for key ' . $key . ' in TextDictionary class');
+        throw new Exception('No value provided for key ' . $key . ' in TextDictionary class');
     }
 }
