@@ -17,12 +17,17 @@ class AdminController extends BaseController
     /**
      * @var DoctrineManagerService
      */
-    private $em;
+    protected $em;
+
+    /**
+     * @var TextDictionary
+     */
+    protected $textDictionary;
 
     public function __construct(TextDictionary $textDictionary, DoctrineManagerService $em)
     {
+        $this->textDictionary = $textDictionary;
         $this->em = $em;
-        parent::__construct($textDictionary);
     }
 
     public function categories() {
@@ -42,7 +47,7 @@ class AdminController extends BaseController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->save($categories);
 
-            $this->addFlash('success', $this->getText('admin_database_saved'));
+            $this->addFlash('success', $this->textDictionary->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_categories');
         }
 
@@ -68,7 +73,7 @@ class AdminController extends BaseController
         if ($form->isSubmitted() && $form ->isValid()) {
             $this->em->save($institution);
 
-            $this->addFlash('success', $this->getText('admin_database_saved'));
+            $this->addFlash('success', $this->$this->textDictionary->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_institutions');
         }
 
@@ -110,7 +115,7 @@ class AdminController extends BaseController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->em->save($performers);
 
-            $this->addFlash('success', $this->getText('admin_database_saved'));
+            $this->addFlash('success', $this->textDictionary->getText('admin_database_saved'));
             return $this->redirectToRoute('admin_performers');
         }
         return $this->render('Admin\admin_performers_new.html.twig', [
