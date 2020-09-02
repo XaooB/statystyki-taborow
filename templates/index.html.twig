@@ -1,5 +1,18 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>{{ heading }}</h1>
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Kategoria</th>
+            <th>Instytucja</th>
+        </tr>
+        {% for vehicle in vehicles %}
+            <tr>
+                <td>{{ vehicle.name }}</td>
+                <td>{{ vehicle.category }}</td>
+                <td>{{ vehicle.institution }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
