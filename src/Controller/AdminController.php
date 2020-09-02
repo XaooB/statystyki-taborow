@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\Institution;
 use App\Entity\Performer;
+use App\Entity\Vehicle;
 use App\Form\AdminCategoriesType;
 use App\Form\AdminInstitutionsType;
 use App\Form\AdminPerformersType;
+use App\Form\AdminVehiclesType;
 use App\Services\DoctrineManagerService;
 use App\Services\TextDictionary;
 use Symfony\Component\HttpFoundation\Request;
@@ -83,11 +85,28 @@ class AdminController extends BaseController
     }
 
     public function vehicles() {
-        return $this->render('Admin\admin_vehicles.html.twig');
+        $em = $this->getEntity(Vehicle::class);
+        $vehicles = $em->findAll();
+
+        return $this->render('Admin\admin_vehicles.html.twig', [
+            'vehicles' => $vehicles
+        ]);
     }
 
-    public function vehicles_new() {
-        return $this->render('Admin\admin_vehicles_new.html.twig');
+    public function vehicles_new(Request $request) {
+        $vehicle = new Vehicle();
+        $form = $this->createForm(AdminVehiclesType::class, $vehicle);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->em->save($vehicle);
+
+            $this->addFlash('success', $this->textDictionary->getText('admin_database_saved'));
+            return $this->redirectToRoute('admin_vehicles');
+        }
+        return $this->render('Admin\admin_vehicles_new.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 
     public function repairs() {

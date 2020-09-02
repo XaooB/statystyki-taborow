@@ -1,5 +1,27 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>admin vehicles</h1>
+    <div class="admin__header">
+        <h1>Pojazdy</h1>
+        <a class="button" href="{{ path('admin_vehicles_new') }}">{{ getText('admin_add_new') }}</a>
+    </div>
+    <table>
+        <tr>
+            <th>Nazwa</th>
+            <th>Kategoria</th>
+            <th>Instytucja</th>
+            <th>Akcje</th>
+        </tr>
+        {% for vehicle in vehicles %}
+            <tr>
+                <td>{{ vehicle.name }}</td>
+                <td>{{ vehicle.category }}</td>
+                <td>{{ vehicle.institution }}</td>
+                <td>
+                    <button class="button">{{ getText('admin_delete') }}</button>
+                    <button class="button">{{ getText('admin_edit') }}</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

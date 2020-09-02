@@ -4,6 +4,10 @@ namespace App\Form;
 
 use App\Entity\Vehicle;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,11 +17,12 @@ class AdminVehiclesType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('description')
-            ->add('image')
-            ->add('added_at')
+            ->add('description', TextareaType::class)
+            ->add('image', FileType::class)
+            ->add('added_at', DateType::class)
             ->add('category')
             ->add('institution')
+            ->add('Save', SubmitType::class)
         ;
     }
 
