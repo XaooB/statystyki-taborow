@@ -1,6 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {% include 'Admin/toolbar.html.twig' %}
+    
     <div class="admin__header">
         <h1>Instytucje</h1>
         <a class="button" href="{{ path('admin_institutions_new') }}">{{ getText('admin_add_new') }}</a>

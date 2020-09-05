@@ -12,7 +12,8 @@ class TextDictionary
         'admin_edit' => 'Edytuj',
         'admin_delete' => 'Usuń',
         'admin_database_saved' => 'Nowy wpis został dodany do bazy',
-        'admin_add_new' => 'Dodaj'
+        'admin_add_new' => 'Dodaj',
+        'admin_go_back' => 'Powrót'
     ];
 
     public function getText($key) {

@@ -4,6 +4,7 @@
     <div class="admin__header">
         <h1>Pojazdy</h1>
         <a class="button" href="{{ path('admin_vehicles_new') }}">{{ getText('admin_add_new') }}</a>
+        {% include 'Admin/toolbar.html.twig' %}
     </div>
     <table>
         <tr>
