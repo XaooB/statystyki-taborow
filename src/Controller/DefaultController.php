@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Vehicle;
+use App\Entity\Institution;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DefaultController extends BaseController
@@ -12,12 +12,12 @@ class DefaultController extends BaseController
 //        $tokenStorage = $this->get('security.token_storage');
 //        $user = $tokenStorage->getToken()->getUser();
 
-        $vehicles = $this->getEntity(Vehicle::class)->findAll();
+        $institutions = $this->getEntity(Institution::class)->findAll();
 
 
         return $this->render('index.html.twig', [
             'heading' => 'Statystyki Taborowe',
-            'vehicles' => $vehicles
+            'institutions' => $institutions
         ]);
     }
 }

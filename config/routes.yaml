@@ -15,6 +15,10 @@ add:
     path: /new-user
     controller: App\Controller\UserController::add
 
+admin:
+    path: /admin
+    controller: App\Controller\AdminController:index
+
 admin_categories:
     path: /admin/categories
     controller: App\Controller\AdminController:categories

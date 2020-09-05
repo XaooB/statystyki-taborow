@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Services\TextDictionary;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\User\UserInterface;
 

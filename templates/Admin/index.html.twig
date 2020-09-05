@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div>
+        <a href="{{ path('admin_vehicles') }}">Pojazdy</a>
+        <a href="{{ path('admin_categories') }}">Kategorie</a>
+        <a href="{{ path('admin_institutions') }}">Instytucje</a>
+        <a href="{{ path('admin_performers') }}">Wykowancy</a>
+    </div>
+{% endblock %}

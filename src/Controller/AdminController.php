@@ -32,6 +32,10 @@ class AdminController extends BaseController
         $this->em = $em;
     }
 
+    public function index() {
+        return $this->render('Admin\index.html.twig');
+    }
+
     public function categories() {
         $em = $this->getEntity(Category::class);
         $categories = $em->findAll();
